@@ -1,0 +1,52 @@
+{
+  "name": "Layers",
+  "id": "903022218808951411",
+  "api": "1.0.0",
+  "main": "dist/code.js",
+  "ui": "dist/ui.html",
+  "menu": [
+    {
+      "name": "Open Plugin",
+      "command": "open"
+    },
+    {
+      "separator": true
+    },
+    {
+      "name": "Synchronise strings",
+      "command": "sync"
+    },
+    {
+      "separator": true
+    },
+    {
+      "name": "Export",
+      "menu": [
+        {
+          "name": "as JSON",
+          "command": "ex_json"
+        },
+        {
+          "name": "as XML",
+          "command": "ex_xml"
+        }
+      ]
+    }
+  ],
+  "relaunchButtons": [
+    {
+      "command": "edit",
+      "name": "Name 1"
+    },
+    {
+      "command": "open",
+      "name": "Name 2",
+      "multipleSelection": true
+    },
+    {
+      "command": "close",
+      "name": "Name 3",
+      "multipleSelection": true
+    }
+  ]
+}

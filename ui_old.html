@@ -1,0 +1,24 @@
+<h2>Rectangle Creator</h2>
+<p>Count: <input id="count" value="5"></p>
+<button id="create">Create</button>
+<button id="cancel">Cancel</button>
+<script>
+
+  console.log('ui.html', this)
+  // console.log('.pages_panel--tab--3s1Y5', $('.pages_panel--tab--3s1Y5'))
+  console.log('document', document)
+  // console.log('.pages_panel--tab--3s1Y5', parent.getElementsByClassName('pages_panel--tab--3s1Y5'))
+  // console.log('parent', parent)
+  // console.log('.pages_panel--tab--3s1Y5', document.getElementsByClassName('pages_panel--tab--3s1Y5'))
+
+document.getElementById('create').onclick = () => {
+  const textbox = document.getElementById('count');
+  const count = parseInt(textbox.value, 10);
+  parent.postMessage({ pluginMessage: { type: 'create-rectangles', count } }, '*')
+}
+
+document.getElementById('cancel').onclick = () => {
+  parent.postMessage({ pluginMessage: { type: 'cancel' } }, '*')
+}
+
+</script>
